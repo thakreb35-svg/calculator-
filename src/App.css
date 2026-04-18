@@ -1,19 +1,87 @@
-.app {
-  text-align: center;
-  margin-top: 50px;
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1e1e2f, #2b2b45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-input {
-  width: 200px;
-  height: 40px;
-  font-size: 20px;
-  margin-bottom: 20px;
+/* Container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Calculator Card */
+.calculator {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  width: 300px;
+}
+
+/* Display */
+.display {
+  width: 100%;
+  height: 60px;
+  border: none;
+  outline: none;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 24px;
   text-align: right;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
 }
 
-.buttons button {
-  width: 50px;
-  height: 50px;
-  margin: 5px;
+/* Buttons grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* Button base */
+.btn {
+  height: 60px;
+  border: none;
+  border-radius: 12px;
   font-size: 18px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  transition: 0.2s;
+}
+
+/* Hover effect */
+.btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* Special buttons */
+.special {
+  background: #ff4d4d;
+}
+
+/* Operators */
+.operator {
+  background: #ff9f43;
+}
+
+/* Equal button */
+.equal {
+  background: #00c853;
+  grid-column: span 1;
+}
+
+/* Zero button */
+.zero {
+  grid-column: span 2;
 }
